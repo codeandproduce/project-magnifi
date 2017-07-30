@@ -1,0 +1,54 @@
+/* main colors 
+	
+	
+	text: #bda696
+block p: #e09462
+left m: #a56d47
+right m: #be7e53
+top cube filling: #f9e5d8
+left cube filling: #bda696
+right cube filling:#e3cbbc
+hexagon: #e1d1c5
+
+*/
+
+#wall1{
+	background-image:url('./../images/bg2.png');
+
+
+}
+#wall3{
+	background-image:url('./../images/bg3.jpg');
+	height:65vh;
+}
+
+.firstcontent{
+	width:100vw;
+	padding:80px 100px;
+}
+
+.about-mich h1{
+	font-size:50px;
+	color:#e09462;
+	font-weight:300;
+}
+.des{
+	margin-top:40px;
+}
+.about-mich strong{
+	color:#a56d47;
+	font-size:30px;
+}
+br{
+	margin-top:20px;
+}
+
+.thisis{
+	margin-top:40px;
+}
+li{
+	list-style: none;
+}
+.why strong{
+	font-size:20px;
+}

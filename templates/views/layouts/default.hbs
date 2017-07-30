@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Project Magnifi</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link href="/styles/site.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/standard.css"/>
+		<link rel="stylesheet" href="css/main-page.css"/>
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<nav class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	           <span class="icon-bar"></span>
+	          </button>
+
+	          <a class="navbar-brand" href="#"><img class="logo" src="images/logo-1.png"/></a>
+
+			<div id="navbar" class="navbar-collapse collapse">
+
+	          <ul class="nav navbar-nav">
+	            <li><a class="linknav" href="#">Home</a></li>
+	            <li class="dropdown">
+	              <a class="linknav" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+	              <ul class="dropdown-menu">
+	                <li><a class="linknav" href="#">Mission</a></li>
+	                <li><a href="#">About</a></li>
+	              </ul>
+	            </li>
+	            <li><a class="linknav" href="#contact">Helpline</a></li>
+	            <li><a class="linknav" href="#contact">Updates</a></li>
+	            <li><a class="linknav" href="#contact">Contact</a></li>
+	            <li><a class="linknav" href="#contact">Donate</a></li>
+
+	          </ul>
+
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+			</div>
+		</div>
+		<div id="body">
+			<!--
+				Flash messages allow you to display once-off status messages to users, e.g. form
+				validation errors, success messages, etc
+			-->
+			{{#if messages}}
+			<div id="flash-messages" class="container">
+				{{#if messages.info}}
+				<div class="alert alert-info">
+						{{{flashMessages messages.info}}}
+				</div>
+				{{/if}}
+				{{#if messages.success}}
+				<div class="alert alert-success">
+						{{{flashMessages messages.success}}}
+				</div>
+				{{/if}}
+				{{#if messages.warning}}
+				<div class="alert alert-warning">
+						{{{flashMessages messages.warning}}}
+				</div>
+				{{/if}}
+				{{#if messages.error}}
+				<div class="alert alert-danger">
+						{{{flashMessages messages.error}}}
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<!-- The content block should contain the body of your template's content-->
+			{{{body}}}
+		</div>
+		<div class="footer">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="menu col-md-12">
+
+							<h1 class="heading footerheading"><strong>Project Magnifi</strong></h1>
+
+							<div class="links">
+								<a href="#">Helpline</a>
+								<a href="#">Updates</a>
+								<a href="#">About</a>
+								<a href="#">Donate</a>
+							</div>
+
+					</div>
+				</div>
+				<div class="row col-md-12 footeritem-contain">
+					<div class="footeritem col-md-4">
+						<div class="subscribe">
+							<h2>Stay in touch!</h2>
+							<p>Subscribe to new updates on stuff that we do!</p>
+							<ul>
+								<li><input type="text" name="subcsribe" placeholder="john@doe.com"/></li>
+								<li><button type="submit">Submit</button></li>
+              </ul>
+						</div>
+					</div>
+					<div class="footeritem col-md-4">
+						<div class="footer-desc">
+							<p><strong>Project Magnifi</strong> is an organization created by Michelle Sun. She had personally struggled through issues that she seeks to combat today. Find out more about her.</p>
+							<button class="redirect">About</button>
+						</div>
+					</div>
+					<div class="footeritem col-md-4">
+						<div class="footer-desc">
+							<p>At <strong>Project Magnifi</strong>, we seek to help others in need by letting them talk their issues over with people. Having someone to talk to could be of tremendous help. Visit our helpline.</p>
+							<button class="redirect">Helpline</button>
+						</div>
+					</div>
+				</div>
+				<div class="copyright col-md-12">
+					<a class="copyright" href="#">This website was created by <strong>Ornaments</strong>. Find out more about us!</a>
+				</div>
+			</div>
+
+
+		</div>
+		{{!--
+			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>
