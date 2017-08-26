@@ -53,7 +53,9 @@ img.logo{
 }
 a.linknav{
 	color:#a56d47 !important;
-
+}
+a.linknav:hover{
+	opacity:0.7;
 }
 .navbar-header{
 	height:100px;
@@ -75,10 +77,67 @@ a.navbar-brand{
 	padding:20px;
 }
 .dropdown-menu a{
-
 	width:100%;
 	text-align: center;
 	font-size:15px;
+}
+
+.one-menu{
+  margin-bottom:7px;
+  width:100%;
+  height:5px;
+  border-radius: 100px;
+  background-color:black;
+  display:block;
+  transition:all 500ms ease-in-out;
+}
+.menu-button{
+  display:none;
+  float:right;
+  width:40px;
+  margin-right:70px;
+  margin-top:25px;
+  height:40px;
+}
+.menu-button:hover{
+  opacity:0.6;
+  transition:all 250ms ease-in-out;
+  cursor:pointer;
+}
+.contain-menu{
+  height:calc(100vh - 100px);
+  width:100%;
+  position: fixed;
+  z-index:1000000;
+  background-color:#f2ad82;
+  right:-100%;
+  bottom:0;
+  transition: right 500ms ease-in-out;
+}
+.contain-menu-contain{
+  padding:10%;
+}
+.contain-menu-link{
+  width:100%;
+  margin-top:30px;
+}
+.contain-menu-contain a{
+  font-size:20px;
+  color:white;
+}
+.dropdown-a-ul{
+	padding-top:20px;
+	display:none;
+	padding-left:50px;
+}
+.dropdown-a-ul li{
+	list-style: none;
+	margin-bottom:20px;
+}
+@media(max-width:768px){
+	.menu-button{
+		display:inline-block;
+	}
 }
 
 /* Background */
@@ -90,7 +149,7 @@ a.navbar-brand{
 	background-attachment:fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center 2px;
 }
 
 
