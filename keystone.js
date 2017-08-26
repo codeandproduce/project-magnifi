@@ -27,11 +27,11 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
 	}).engine,
-
 	'auto update': true,
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'cookie secret': '=Hw1WfV6XlGW(w~K8=&5r%U2]EZ'
 });
 
 // Load your project's Models
