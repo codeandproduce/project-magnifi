@@ -1,15 +1,34 @@
-<div style="margin-top:400px" class="container">
-  <h1>Updates!</h1>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        {{# each updates}}
-          <div class="col-md-4">
-            <h2><a href="">{{{title}}}</a></h2>
-          </div>
+<link rel="stylesheet" href="/css/updates.css"/>
+<div id="wall1" class="bg-img">
+  	<div class="head">
+			<h1 class="heading">Updates</h1>
+		</div>
+</div>
+<div class="content firstcontent">
+			<div class="contain">
 
-        {{/each}}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row eventscontain">
+              <div class="events upcomingevents">
+                <h1>Upcoming Events</h1>
+                <hr/>
+
+
+                <div class="row">
+                  {{# each updates}}
+                    <div class="col-md-6 oneevent">
+                      <h2><a href="#" class="title">{{{title}}}</a></h2>
+                      <h4 class="date">{{{date}}}</h4>
+                      <p class="shortdes">{{{shortdescription}}}</p>
+                    </div>
+                  {{/each}}
+               </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
 </div>

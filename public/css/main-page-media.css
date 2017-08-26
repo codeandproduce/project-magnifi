@@ -1,0 +1,9 @@
+@media(max-width:600px){
+  .firstcontent{
+    padding:10px 30px;
+  }
+  .secondcontent{
+    padding:20px 30px;
+  }
+
+}

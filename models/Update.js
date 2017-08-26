@@ -12,8 +12,9 @@ Update.add({
   title: {type: String, required: true},
   location: {type: String, required: true, default:"Shanghai"},
   description: {type: Types.Html, wysiwyg: true, height: 300},
+  shortdescription: {type: String},
   image: {type: Types.CloudinaryImage},
-  publishDate: {type: Date, default: Date.now}
+  date: {type: Date, default: Date.now}
 
 });
 

@@ -1,0 +1,11 @@
+.oneevent{
+  text-align:center;
+}
+#wall1{
+  background-image:url('./../images/bg1.png');
+}
+
+.firstcontent{
+  padding:100px;
+  padding-top:50px;
+}

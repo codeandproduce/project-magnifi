@@ -21,9 +21,8 @@ body{
 }
 .content{
 	padding:20px 30px;
-	background-color:#f9e5d8;
+	background-color:white;
 }
-
 
 /* Navigation */
 .navbar{
@@ -56,14 +55,11 @@ a.linknav{
 	color:#a56d47 !important;
 
 }
-
-
 .navbar-header{
 	height:100px;
 	width: 80px;
 }
 a.navbar-brand{
-
 	width:65px;
 	height:65px;
 	padding:0px;
@@ -119,13 +115,10 @@ h1.heading{
 
 .mission{
 	margin:30px 0;
-	font-size:35px;
-	font-weight:300;
-	text-align: center;
 	letter-spacing: 1px;
 	height:100%;
-		vertical-align: middle;
-		display:table-cell;
+	vertical-align: middle;
+	display:table-cell;
 }
 
 /* Purposes */
@@ -166,12 +159,13 @@ h2.whatwedo{
 	background-color:white;
 	color:black;
 	font-size:15px;
-	border:1px solid black;
+	border:2px solid #e09462;
 }
 .more-btn:hover{
 	transition: all 250ms ease-in-out;
-	background-color:black;
+	background-color:#e09462;
 	color:white;
+	border:2px solid #e09462;
 }
 
 /* Final content */
@@ -226,9 +220,7 @@ h2.whatwedo{
 .about-btn:hover{
 	background-color:white;
 	color:black;
-}
-.about-btn{
-
+	border:none;
 }
 
 /* Footer */
@@ -294,15 +286,30 @@ h1.footerheading{
 .subscribe button{
 	padding:12px 35px;
 	color:black;
-	border:1px solid black;
+	border:1px solid white;
 	background-color:white;
 }
 .subscribe button:hover{
-	color:white;
-	background-color:black;
+	color:black;
+	background-color:#f9e5d8;
 	transition: all 250ms ease-in-out;
-	border: 1px solid white;;
+	border:none;
+	border:1px solid #f9e5d8;
 }
+/* main colors
+
+
+	text: bda696
+block p: #e09462
+left m: #a56d47
+right m: #be7e53
+top cube filling: #f9e5d8
+left cube filling: #bda696
+right cube filling:#e3cbbc
+hexagon: #e1d1c5
+
+*/
+
 input:focus{
 	outline:none;
 }
@@ -332,47 +339,45 @@ input:focus{
 	margin-top:25px;
 	background-color:white;
 	color:black;
-	border:1px solid black;
+	border:none;
 	padding:12px 35px;
 }
 .footeritem .redirect:hover{
-	border:1px solid white;
-	background-color:black;
-	color:white;
-	transition:all 250ms ease-in-out;
+	color:black;
+	background-color:#f9e5d8;
+	transition: all 250ms ease-in-out;
+	border:none;
+}
+.contain{
+	height:100%;
+	display:table;
+}
+.firstcontent{
+	padding:10px 20px;
 }
 
+.mission h2{
+	font-size:35px;
+	font-weight:300;
+	text-align: center;
+}
+.containphrase h1{
+	font-size:30px;
+	width:100%;
+	padding:0;
+}
+.firstcontent > .contain hr{
+	margin:35px;
+}
 
 /* Responsive */
-
 @media(max-width:992px){
-	.contain{
-		height:100%;
-		display:table;
-	}
 	.firstcontent{
-		padding:10px 20px;
-	}
-	.firstcontent hr{
-		visibility: hidden;
-	}
-	h2.mission{
+    padding:10px 40px !important;
+  }
+	.mission h2{
 		font-size:30px;
 	}
-
-
-	.containfinal{
-		padding:0;
-		margin:0;
-	}
-
-	.containphrase h1{
-		font-size:30px;
-		width:100%;
-		padding:0;
-	}
-
-
 /* 	footer */
 	.subscribe input{
 		width:50%;
@@ -383,6 +388,12 @@ input:focus{
 	.footeritem-contain p{
 		padding:0 25%;
 	}
+	.firstcontent{
+		padding:10px 20px;
+	}
+	.secondcontent{
+		padding:20px 30px;
+	}
 }
 @media(max-width:600px){
 	.head{
@@ -391,8 +402,8 @@ input:focus{
 	.head h1{
 		font-size:40px;
 	}
-	h2.mission{
-		font-size:25px;
+	.mission h2{
+		font-size:20px;
 	}
 	.menu{
 		padding:40px 30px;
@@ -400,7 +411,6 @@ input:focus{
 	.menu h1{
 		font-size:40px;
 	}
-
 	.links a{
 		display: block;
 		margin-top:20px;
@@ -412,4 +422,15 @@ input:focus{
 	.footeritem-contain p{
 		padding:0 10%;
 	}
+	.containfinal{
+		margin-top: calc(22vh - 30px);
+		padding:0 20px;
+	}
+	.containphrase{
+		font-size:28px;
+	}
+	.about-btn{
+		font-size:22px;
+	}
+
 }
